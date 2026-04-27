@@ -1,0 +1,13 @@
+name: Execute AI Task
+on:
+  workflow_dispatch: # This gives you the "Run" button in GitHub
+
+jobs:
+  trigger-gemini:
+    uses: kreicken/.github/.github/workflows/gemini-logic.yml@main
+    with:
+      task: "Analyze the code in this repo. If there are no comments on the main functions, write them and open a Pull Request."
+    secrets:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_APP_ID: ${{ secrets.GEMINI_APP_ID }}
+      GEMINI_APP_PRIVATE_KEY: ${{ secrets.GEMINI_APP_PRIVATE_KEY }}
