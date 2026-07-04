@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+logs/
+audio/*.flac
+project.json
+scratch/
+!scratch/.keep
+.DS_Store

@@ -1,0 +1,22 @@
+[project]
+name = "station_daw"
+version = "0.1.0"
+description = "Retro 4-track DAW with native tethering support"
+readme = "STATION_DAW_OVERVIEW.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.11.0",
+    "sounddevice>=0.4.6",
+    "soundfile>=0.12.1",
+    "pydub>=0.25.1",
+    "PyQt6>=6.5.0",
+    "pedalboard",
+]
+
+[tool.uv]
+package = false
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
