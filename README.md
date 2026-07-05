@@ -8,29 +8,31 @@ It also supports native "tethering" with the **Golden Bull Synthesizer**, launch
 
 ## 🛠️ Installation (Debian/Ubuntu Linux)
 
-Follow these steps to set up and run the DAW on any Debian-based machine.
+You can install all dependencies and set up a Desktop Launcher automatically using the installer script, or install manually.
 
-### 1. Install System Audio and Python Dependencies
-Ensure you have the required audio backend and compression libraries installed on your system:
+### Option A: Automated Installation (Recommended)
+This will install system audio packages, set up a python virtual environment, install requirements, and create a Desktop launcher:
+```bash
+git clone https://github.com/kreicken/STATION_MASTER_DAW.git
+cd STATION_MASTER_DAW
+chmod +x install.sh
+./install.sh
+```
+
+### Option B: Manual Installation
+1. Install system packages:
 ```bash
 sudo apt-get update
 sudo apt-get install -y python3-pip python3-venv libportaudio2 libasound2-dev ffmpeg
 ```
-
-### 2. Clone the Repository and Setup Virtual Environment
+2. Clone, setup virtual environment, and install dependencies:
 ```bash
 git clone https://github.com/kreicken/STATION_MASTER_DAW.git
 cd STATION_MASTER_DAW
 python3 -m venv .venv
 source .venv/bin/activate
-```
-
-### 3. Install Dependencies
-You can install the Python dependencies directly using pip:
-```bash
 pip install -e .
 ```
-*(Or use `pip install -r pyproject.toml` if using a modern PEP-517/518 build tool).*
 
 ---
 
